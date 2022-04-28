@@ -1,0 +1,1 @@
+CurrentTheme: ./resources/themes/default_light_theme
