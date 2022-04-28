@@ -1,0 +1,30 @@
+# Lines start from "#" symbol dont readed
+
+# TODO: reading fonts; numbers; colors by hex, as Menu utc., as White utc.
+# TODO: reading from def
+# TODO: read font for PathTextToo :)
+# TODO: read font for BtnOpenTextToo
+# TODO: add button style
+
+# ThemeInfo
+
+ThemeName: Default Light
+
+# Defaults
+def f font: Microsoft YaHei
+def n fontSize: 8
+def c fontColor: #000000
+def c filesBack: #FFFFFF
+def c menuMain: (153, 180, 209)
+def c menuSecond: (115, 151, 191)
+def c tools: (240, 240, 240)
+def c border: #AAAAAA
+
+# MoreDetail
+TagPanel Background: ActiveCaption
+ToolPanel Background: tools
+PathLabel Font: Webdings
+PathText Background: White
+PathText ForeColor: ButtonShadow
+
+
