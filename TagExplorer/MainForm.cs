@@ -12,9 +12,21 @@ namespace TagExplorer
 {
     public partial class TagExplorer : Form
     {
+        private DesignManager designManager;
+        
         public TagExplorer()
         {
+            designManager = new DesignManager();
             InitializeComponent();
+        }
+
+        
+        public TagExplorer(DesignManager designManager)
+        {
+            //DesignManager designManager = new DesignManager();
+            this.designManager = designManager;
+            InitializeComponent();
+
         }
 
         private void btnOpen_Click(object sender, EventArgs e)

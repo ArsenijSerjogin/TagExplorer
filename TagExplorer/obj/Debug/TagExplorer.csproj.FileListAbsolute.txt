@@ -9,6 +9,3 @@ C:\Users\User\source\repos\TagExplorer\TagExplorer\obj\Debug\TagExplorer.exe
 C:\Users\User\source\repos\TagExplorer\TagExplorer\obj\Debug\TagExplorer.pdb
 C:\Users\User\source\repos\TagExplorer\TagExplorer\obj\Debug\TagExplorer.csproj.SuggestedBindingRedirects.cache
 C:\Users\User\source\repos\TagExplorer\TagExplorer\obj\Debug\TagExplorer.TagExplorer.resources
-C:\Users\User\source\repos\TagExplorer\TagExplorer\bin\Debug\en\TagExplorer.resources.dll
-C:\Users\User\source\repos\TagExplorer\TagExplorer\obj\Debug\TagExplorer.TagExplorer.en.resources
-C:\Users\User\source\repos\TagExplorer\TagExplorer\obj\Debug\en\TagExplorer.resources.dll

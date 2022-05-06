@@ -63,7 +63,9 @@ namespace TagExplorer
             // 
             // pathText
             // 
+            this.pathText.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pathText, "pathText");
+            this.pathText.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.pathText.Name = "pathText";
             // 
             // pathLabel

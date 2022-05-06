@@ -125,8 +125,11 @@
   <data name="TagPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="TagPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="TagPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 561</value>
+    <value>240, 518</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TagPanel.TabIndex" type="System.Int32, mscorlib">
@@ -144,11 +147,17 @@
   <data name="&gt;&gt;TagPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnOpen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
   <data name="btnOpen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>537, 19</value>
+    <value>583, 18</value>
+  </data>
+  <data name="btnOpen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="btnOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>75, 21</value>
   </data>
   <data name="btnOpen.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -168,14 +177,23 @@
   <data name="&gt;&gt;btnOpen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="pathText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
   <data name="pathText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 21</value>
+    <value>92, 19</value>
+  </data>
+  <data name="pathText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="pathText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 20</value>
+    <value>483, 20</value>
   </data>
   <data name="pathText.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="pathText.Text" xml:space="preserve">
+    <value>Dont work now</value>
   </data>
   <data name="&gt;&gt;pathText.Name" xml:space="preserve">
     <value>pathText</value>
@@ -192,11 +210,17 @@
   <data name="pathLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="pathLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei, 8.25pt</value>
+  </data>
   <data name="pathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 23</value>
+    <value>32, 21</value>
+  </data>
+  <data name="pathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="pathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>37, 16</value>
   </data>
   <data name="pathLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -220,10 +244,13 @@
     <value>Top</value>
   </data>
   <data name="ToolPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 0</value>
+    <value>240, 0</value>
+  </data>
+  <data name="ToolPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="ToolPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>734, 100</value>
+    <value>731, 92</value>
   </data>
   <data name="ToolPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -244,13 +271,16 @@
     <value>Fill</value>
   </data>
   <data name="webBrowser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 100</value>
+    <value>240, 92</value>
+  </data>
+  <data name="webBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="webBrowser.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>30, 18</value>
   </data>
   <data name="webBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>734, 461</value>
+    <value>731, 426</value>
   </data>
   <data name="webBrowser.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -271,13 +301,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>9, 12</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>984, 561</value>
+    <value>971, 518</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Wingdings, 8pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1692,6 +1725,9 @@
         AAAA//////////8ACAIAA+AAAf//////////4A+CAAP//wf//////////+CPgAAD////////////////
         /4AAA/////////////////+B/wP/////////////////gf8B////////////////////Af///////w==
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>TagExplorer</value>

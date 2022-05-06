@@ -10,20 +10,24 @@
 
 ThemeName: Default Light
 
-# Defaults
-def f font: Microsoft YaHei
-def n fontSize: 8
-def c fontColor: #000000
-def c filesBack: #FFFFFF
-def c menuMain: (153, 180, 209)
-def c menuSecond: (115, 151, 191)
-def c tools: (240, 240, 240)
-def c border: #AAAAAA
+# Standart parts (defaults)
+def font: Microsoft YaHei
+def fontSize: 8
+def fontColor: #000000
+def filesBack: #FFFFFF
+def menuMain: (153, 180, 209)
+def menuSecond: (115, 151, 191)
+def tools: (240, 240, 240)
+def border: #AAAAAA
+
+# New values
+
+new f testOfCustoms: Webdings
 
 # MoreDetail
 TagPanel Background: ActiveCaption
 ToolPanel Background: tools
-PathLabel Font: Webdings
+PathLabel Font: testOfCustoms
 PathText Background: White
 PathText ForeColor: ButtonShadow
 
