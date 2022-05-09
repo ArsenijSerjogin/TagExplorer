@@ -1,30 +1,35 @@
-# Lines start from "#" symbol dont readed
+# Lines start from "#" symbol don't readed
 
-# TODO: reading fonts; numbers; colors by hex, as Menu utc., as White utc.
-# TODO: reading from def
-# TODO: read font for PathTextToo :)
-# TODO: read font for BtnOpenTextToo
-# TODO: add button style
-
+#
 # ThemeInfo
+#
 
 ThemeName: Default Light
 
+#
 # Standart parts (defaults)
+#
+
 def font: Microsoft YaHei
 def fontSize: 8
-def fontColor: #000000
-def filesBack: #FFFFFF
+def fontColorMain: #000000
+def fontColorShadow: #BBBBBB
 def menuMain: (153, 180, 209)
 def menuSecond: (115, 151, 191)
 def tools: (240, 240, 240)
-def border: #AAAAAA
+def toolsSecond: (200, 200, 200)
+def space: #FFFFFFFF
+def selectedButton: #00FF00
+def deselectedButton: #AAAAFF
 
 # New values
+# not working
 
 new f testOfCustoms: Webdings
 
-# MoreDetail
+# More Detail
+# not working
+
 TagPanel Background: ActiveCaption
 ToolPanel Background: tools
 PathLabel Font: testOfCustoms

@@ -16,8 +16,8 @@ namespace TagExplorer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DesignManager designManager = new DesignManager();
-            Application.Run(new TagExplorer(designManager));
+            DesignManager.Inicialize();
+            Application.Run(new TagExplorer());
         }
     }
 }

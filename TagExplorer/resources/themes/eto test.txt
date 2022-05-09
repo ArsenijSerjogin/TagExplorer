@@ -1,0 +1,12 @@
+
+ThemeName: Void
+
+def font: Webdings
+def fontSize: 8
+def fontColorMain: #FFFFFF
+def fontColorShadow: #BBBBBB
+def menuMain: (13, 255, 09)
+def menuSecond: (115, 1, 1)
+def tools: #FF0000
+def toolsSecond: #00FF00
+def border: #AAAAAA

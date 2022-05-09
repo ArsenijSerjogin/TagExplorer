@@ -69,7 +69,20 @@ namespace TagExplorer
                 return System.Drawing.ColorTranslator.FromHtml(color);
             }
 
-            throw new Exception($"Color with name {name} cannot be drawn.");
+            if (color.StartsWith("("))
+            {
+                string[] colorsParts = color.Split(',');
+                char[] trimChars = {' ', '(', ')', ','};
+                int A = 255;
+                if (colorsParts.Length > 3) 
+                    A = int.Parse(colorsParts[3].Trim(trimChars));
+                int R = int.Parse(colorsParts[0].Trim(trimChars));
+                int G = int.Parse(colorsParts[1].Trim(trimChars));
+                int B = int.Parse(colorsParts[2].Trim(trimChars));    
+                return System.Drawing.Color.FromArgb(A, R, G, B); 
+            }
+
+            throw new Exception($"Color with name \"{name}\" cannot be drawn.");
             // TODO: check is null;
         }
         #endregion
@@ -90,13 +103,16 @@ namespace TagExplorer
             fontSize = 12;
 
             defaultColors = new List<Tuple<string, string>>();
-            defaultColors.Add(Tuple.Create("fontColor", "#000000"));
-            defaultColors.Add(Tuple.Create("space", "#FFFFFF"));
+            defaultColors.Add(Tuple.Create("fontColorMain", "#000000"));
+            defaultColors.Add(Tuple.Create("fontColorShadow", "#000000"));
+            defaultColors.Add(Tuple.Create("space", "#FFFFFFFF"));
             defaultColors.Add(Tuple.Create("menuMain", "(153, 180, 209)"));
             defaultColors.Add(Tuple.Create("menuSecond", "(115, 151, 191)"));
             defaultColors.Add(Tuple.Create("tools", "(240, 240, 240)"));
+            defaultColors.Add(Tuple.Create("toolsSecond", "(200, 200, 200)"));
             defaultColors.Add(Tuple.Create("border", "#AAAAAA"));
-            defaultColors.Add(Tuple.Create("tools", "#000000"));
+            defaultColors.Add(Tuple.Create("selectedButton", "#00FF00"));
+            defaultColors.Add(Tuple.Create("deselectedButton", "#FFFFFF"));
 
             specialDetails = new List<Tuple<string, string, string>>();
 

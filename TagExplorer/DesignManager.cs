@@ -7,19 +7,32 @@ using System.Threading.Tasks;
 
 namespace TagExplorer
 {
-    public class DesignManager
+    public static class DesignManager
     {
-        private List<Tuple<string, string>> themesNames;
+        public delegate void NoParameter();
+        public static event NoParameter UpdateComponents;
 
-        private string currentThemePath;
-        private Theme theme;
-        public Theme Theme
+        private static List<Tuple<string, string>> themesNames;
+        public static List<string> ThemesNames
+        {
+            get 
+            { 
+                List<string> result = new List<string>();
+                foreach (var theme in themesNames)
+                    result.Add(theme.Item1); //add theme name
+                return result; 
+            }
+        }
+
+        private static string currentThemePath;
+        private static Theme theme;
+        public static Theme Theme
         {
             get { return theme; }
             set { }
         }
 
-        public DesignManager()
+        public static void Inicialize()
         {
             theme = new Theme();
             themesNames = new List<Tuple<string, string>>();
@@ -29,7 +42,7 @@ namespace TagExplorer
             //SetNewThemeByName("Default Light");
         }
 
-        private string ReadParameter(string line) 
+        private static string ReadParameter(string line) 
         {
             int parameterPartBegin = line.IndexOf(":") + 1;
 
@@ -48,8 +61,8 @@ namespace TagExplorer
 
             return parameterValue;
         }
-        
-        private void ReadThemesNames()
+
+        private static void ReadThemesNames()
         {
             var files = Directory.GetFiles(Paths.themesFolder, "*.*", SearchOption.TopDirectoryOnly);
             foreach (var file in files)
@@ -70,7 +83,7 @@ namespace TagExplorer
             }
         }
 
-        private void ReadCurrentSettings() {
+        private static void ReadCurrentSettings() {
             using (StreamReader settings = new StreamReader(Paths.settingsFile))
             {
                 string line;
@@ -95,8 +108,8 @@ namespace TagExplorer
                 settings.Close();
             }
         }
-        
-        private void ReadTheme(string themePatch) 
+
+        private static void ReadTheme(string themePatch) 
         {
             try
             {
@@ -123,7 +136,7 @@ namespace TagExplorer
                             string defLine = line.Substring(4);
                             string parameter = ReadParameter(defLine);
 
-                            if (defLine.StartsWith("fontSize"))
+                            if (defLine.StartsWith("fontSize:"))
                             {
                                 try
                                 {
@@ -136,7 +149,7 @@ namespace TagExplorer
                                 continue;
                             }
 
-                            if (defLine.StartsWith("fontColor"))
+                            if (defLine.StartsWith("fontColor:"))
                             {
                                 try
                                 {
@@ -151,7 +164,7 @@ namespace TagExplorer
                                 }
                             }
 
-                            if (defLine.StartsWith("font"))
+                            if (defLine.StartsWith("font:"))
                             {
                                 theme.Font = parameter;
                                 continue;
@@ -181,7 +194,7 @@ namespace TagExplorer
             }
         }
 
-        private void ReadCurrentTheme()
+        private static void ReadCurrentTheme()
         {
             if (currentThemePath == null)
             {
@@ -190,7 +203,7 @@ namespace TagExplorer
             ReadTheme(currentThemePath);
         }
 
-        private void WriteCurrentThemePath(string themePatch)
+        private static void WriteCurrentThemePath(string themePatch)
         {
             string[] settingsLines = File.ReadAllLines(Paths.settingsFile);
             for (int i = 0; i < settingsLines.Length; i++)
@@ -204,11 +217,13 @@ namespace TagExplorer
             File.WriteAllLines(Paths.settingsFile, settingsLines);
         }
 
-        public void SetNewThemeByName(string themeName) 
+        public static void SetNewThemeByName(string themeName) 
         { 
+
             if (themeName == null) throw new ArgumentNullException(paramName: nameof(themeName), message: "Can't set new theme without new theme name");
             if (themeName == Theme.Name) return;
 
+            System.Diagnostics.Debug.WriteLine($"Set Theme to {themeName}");
             foreach (var theme in themesNames)
             {
                 if (themeName == theme.Item1)
@@ -216,7 +231,7 @@ namespace TagExplorer
                     ReadTheme(theme.Item2);
                     // Write new current theme to settings file
                     WriteCurrentThemePath(theme.Item2);
-
+                    UpdateComponents();
                     break;
                 }
             }

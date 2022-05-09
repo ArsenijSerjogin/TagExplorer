@@ -12,21 +12,11 @@ namespace TagExplorer
 {
     public partial class TagExplorer : Form
     {
-        private DesignManager designManager;
-        
         public TagExplorer()
         {
-            designManager = new DesignManager();
             InitializeComponent();
-        }
-
-        
-        public TagExplorer(DesignManager designManager)
-        {
-            //DesignManager designManager = new DesignManager();
-            this.designManager = designManager;
-            InitializeComponent();
-
+            DesignManager.UpdateComponents += UpdateComponent;
+            UpdateComponent();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -36,6 +26,12 @@ namespace TagExplorer
                 if (fbd.ShowDialog() == DialogResult.OK)
                     webBrowser.Url = new Uri(fbd.SelectedPath);
             }
+        }
+
+        private void settingsProgramTSMItem_Click(object sender, EventArgs e)
+        {
+            Settings setings = new Settings();
+            setings.Show();
         }
     }
 }
